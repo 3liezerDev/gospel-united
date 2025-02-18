@@ -1,4 +1,16 @@
+
+import { buttonVariants } from "@/components/ui/button"
+import { Typewriter } from 'react-simple-typewriter';
+import { FaCalendarAlt, FaMapMarkerAlt, FaHandsHelping } from 'react-icons/fa';
+
 const Hero = () => {
+
+  const phrases = [
+    { icon: <FaHandsHelping />, text: 'Concierto solidario'  },
+    { icon: <FaCalendarAlt />, text: 'Sábado 3 de Mayo' },
+    { icon: <FaMapMarkerAlt />, text: ' Calle Valencia #655 BCN' },
+  ];
+
   return (
     <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center">
       {/* Fondo con imagen */}
@@ -15,7 +27,20 @@ const Hero = () => {
         <h1 className="text-4xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-center">
           GOSPEL UNITED
         </h1>
-        <p className="text-md sm:text-xl md:text-2xl text-center">Concierto solidario</p>
+        <p className="text-sm sm:text-xl md:text-2xl text-center">
+          <Typewriter
+            words={phrases.map((p) => p.text)}
+            loop={1}
+            cursor
+            cursorStyle="_"
+            typeSpeed={70}
+            deleteSpeed={50}
+            delaySpeed={1500}
+          />
+        </p>
+        <a className={buttonVariants({ variant: "default" })} href="">
+            + Más información
+        </a>
       </div>
     </section>
   );
