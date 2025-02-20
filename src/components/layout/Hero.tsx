@@ -1,14 +1,14 @@
 
 import { buttonVariants } from "@/components/ui/button"
 import { Typewriter } from 'react-simple-typewriter';
-import { FaCalendarAlt, FaMapMarkerAlt, FaHandsHelping } from 'react-icons/fa';
+
 
 const Hero = () => {
 
   const phrases = [
-    { icon: <FaHandsHelping />, text: 'Concierto solidario'  },
-    { icon: <FaCalendarAlt />, text: 'Sábado 3 de Mayo' },
-    { icon: <FaMapMarkerAlt />, text: ' Calle Valencia #655 BCN' },
+    {  text: 'Concierto solidario'  },
+    {  text: 'Sábado 3 de Mayo de 2025' },
+    {  text: ' Calle Valencia #655 BCN' },
   ];
 
   return (

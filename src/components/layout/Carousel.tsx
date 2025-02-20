@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react"; // Importa solo useState y useEffect
+import { useState, useEffect } from "react"; 
 import { CardMod } from "@/components/layout/CardMod";
 import {
   Carousel,
@@ -9,16 +9,13 @@ import {
   type CarouselApi,
 } from "@/components/ui/carousel";
 
-// Define el componente CarouselDApiDemo
 export function CarouselDApiDemo() {
-  const [api, setApi] = useState<CarouselApi>(); // Usa useState directamente
+  const [api, setApi] = useState<CarouselApi>(); 
   const [current, setCurrent] = useState(0);
   const [count, setCount] = useState(0);
 
   useEffect(() => {
-    if (!api) {
-      return;
-    }
+    if (!api) return;
 
     setCount(api.scrollSnapList().length);
     setCurrent(api.selectedScrollSnap() + 1);
@@ -28,13 +25,51 @@ export function CarouselDApiDemo() {
     });
   }, [api]);
 
+  // Datos para las tarjetas
+  const cardData = [
+    {
+      imageSrc: "src/assets/images/light.webp",
+      imageAlt: "Notification Image",
+      title: "Notifications",
+      subtitle: "You have 3 unread messages.",
+      notifications: [
+        { title: "Your call has been confirmed.", description: "1 hour ago" },
+        { title: "You have a new message!", description: "1 hour ago" },
+        { title: "Your subscription is expiring soon!", description: "2 hours ago" },
+      ],
+      buttonText: "Mark as Read",
+    },
+    {
+      imageSrc: "src/assets/images/light.webp",
+      imageAlt: "Notification Image",
+      title: "Updates",
+      subtitle: "You have 2 new updates.",
+      notifications: [
+        { title: "New version available.", description: "30 mins ago" },
+        { title: "Security patch applied.", description: "2 hours ago" },
+      ],
+      buttonText: "Update Now",
+    },
+    {
+      imageSrc: "src/assets/images/light.webp",
+      imageAlt: "Notification Image",
+      title: "Alerts",
+      subtitle: "Check the latest alerts.",
+      notifications: [
+        { title: "Suspicious login detected.", description: "10 mins ago" },
+        { title: "Server maintenance at midnight.", description: "4 hours ago" },
+      ],
+      buttonText: "View Alerts",
+    },
+  ];
+
   return (
-    <div className="mx-auto max-w-[70%] py-6 my-6">
+    <div className="mx-auto max-w-[70%] md:max-w-5xl py-6 my-6">
       <Carousel setApi={setApi} className="w-full max-w-full">
         <CarouselContent>
-          {Array.from({ length: 3 }).map((_, index) => (
+          {cardData.map((data, index) => (
             <CarouselItem key={index}>
-              <CardMod />
+              <CardMod {...data} />
             </CarouselItem>
           ))}
         </CarouselContent>
@@ -48,5 +83,4 @@ export function CarouselDApiDemo() {
   );
 }
 
-// Exporta el componente por defecto
 export default CarouselDApiDemo;
