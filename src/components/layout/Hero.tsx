@@ -1,7 +1,7 @@
 
-import { buttonVariants } from "@/components/ui/button"
+import { buttonVariants } from "../../components/ui/button"
 import { Typewriter } from 'react-simple-typewriter';
-import { cn } from "@/lib/utils"
+import { cn } from "../../lib/utils"
 
 
 const Hero = () => {

@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom"; // Importa useLocation
-import { cn } from "@/lib/utils";
+import {  useLocation } from "react-router-dom"; // Importa useLocation
+import { cn } from "../../lib/utils";
 import { Menu, X } from "lucide-react";
 
 const Navbar = () => {

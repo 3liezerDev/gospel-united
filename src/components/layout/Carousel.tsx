@@ -1,5 +1,5 @@
 import { useState, useEffect } from "react"; 
-import { CardMod } from "@/components/layout/CardMod";
+import { CardMod } from "../../components/layout/CardMod";
 import {
   Carousel,
   CarouselContent,
@@ -7,7 +7,7 @@ import {
   CarouselNext,
   CarouselPrevious,
   type CarouselApi,
-} from "@/components/ui/carousel";
+} from "../../components/ui/carousel";
 
 export function CarouselDApiDemo() {
   const [api, setApi] = useState<CarouselApi>(); 

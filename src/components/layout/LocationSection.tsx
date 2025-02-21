@@ -1,6 +1,6 @@
-import { FaMapMarkerAlt, FaBus, FaTrain, FaCar, FaBicycle } from "react-icons/fa";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { FaMapMarkerAlt, FaBus, FaTrain, FaCar } from "react-icons/fa";
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 
 const LocationSection = () => {
 

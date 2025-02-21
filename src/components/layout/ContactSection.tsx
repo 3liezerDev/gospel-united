@@ -1,6 +1,6 @@
 import { FaWhatsapp, FaEnvelope, FaHandHoldingHeart } from "react-icons/fa";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { Button } from "@/components/ui/button";
+import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
+import { Button } from "../../components/ui/button";
 
 const ContactSection = () => {
   return (
@@ -25,7 +25,7 @@ const ContactSection = () => {
               <ul className="space-y-4">
                 {/* WhatsApp */}
                 <li className="flex items-center gap-2">
-                  <FaWhatsapp className="text-2xl text-teal-500 hover:text-gray-900" />
+                  <FaWhatsapp className="text-2xl text-teal-500 " />
                   <a
                     href="https://wa.me/1234567890" // Reemplaza con tu número de WhatsApp
                     target="_blank"
