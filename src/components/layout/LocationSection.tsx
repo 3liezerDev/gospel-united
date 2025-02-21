@@ -50,7 +50,7 @@ const LocationSection = () => {
           </Card>
 
         {/* Contenedor de la información */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full mt-8">
           {/* Tarjeta de ubicación */}
           <Card className="shadow-lg h-full">
             <CardHeader>

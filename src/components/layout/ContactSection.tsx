@@ -25,19 +25,19 @@ const ContactSection = () => {
               <ul className="space-y-4">
                 {/* WhatsApp */}
                 <li className="flex items-center gap-2">
-                  <FaWhatsapp className="text-xl text-green-500" />
+                  <FaWhatsapp className="text-2xl text-teal-500 hover:text-gray-900" />
                   <a
                     href="https://wa.me/1234567890" // Reemplaza con tu número de WhatsApp
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="text-gray-700 dark:text-gray-300 hover:text-green-500"
+                    className="text-gray-700"
                   >
                     Envíanos un mensaje por WhatsApp
                   </a>
                 </li>
                 {/* Correo electrónico */}
                 <li className="flex items-center gap-2">
-                  <FaEnvelope className="text-xl text-blue-500" />
+                  <FaEnvelope className="text-xl text-gray-700 hover:text-gray-900" />
                   <a
                     href="mailto:info@gospelunited.com" // Reemplaza con tu correo
                     className="text-gray-700 dark:text-gray-300 hover:text-blue-500"
