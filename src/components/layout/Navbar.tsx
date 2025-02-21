@@ -1,23 +1,26 @@
-
 import { useEffect, useState } from "react";
+import { Link, useLocation } from "react-router-dom"; // Importa useLocation
 import { cn } from "@/lib/utils";
-import { Menu, X } from "lucide-react"; // Iconos de menú de lucide-react
+import { Menu, X } from "lucide-react";
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
-  const [textColor, setTextColor] = useState("text-white");
   const [menuOpen, setMenuOpen] = useState(false);
+  const location = useLocation(); // Obtiene la ruta actual
+
+  // Establece los colores por ruta
+  const getTextColor = () => {
+    switch (location.pathname) {
+      case "/gallery":
+        return "text-black"; // Texto oscuro para fondo claro
+      default:
+        return "text-white"; // Texto blanco por defecto
+    }
+  };
 
   useEffect(() => {
     const handleScroll = () => {
-      const scrollY = window.scrollY;
-      setScrolled(scrollY > 50);
-
-      if (scrollY < window.innerHeight - 100) {
-        setTextColor("text-white");
-      } else {
-        setTextColor("text-black");
-      }
+      setScrolled(window.scrollY > 50);
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -32,12 +35,11 @@ const Navbar = () => {
       )}
     >
       <div className="max-w-7xl mx-auto flex justify-between items-center">
-        {/* Logo */}
-        <a href="#" className={cn("text-2xl font-bold", textColor)}>
+        <a href="#inicio" className={cn("text-2xl font-bold", getTextColor())}>
           GOSPEL UNITED
         </a>
 
-        {/* Botón de menú para móviles */}
+        {/* Menú móvil */}
         <button
           className="md:hidden text-white z-50"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -45,39 +47,47 @@ const Navbar = () => {
           {menuOpen ? <X size={30} /> : <Menu size={30} />}
         </button>
 
-        {/* Links de navegación (escritorio) */}
+        {/* Menú de escritorio */}
         <ul className="hidden md:flex gap-6">
-          {["Inicio", "Galería", "Ubicación", "Contacto"].map((item, index) => (
-            <li key={index}>
-              <a
-                href={`#${item.toLowerCase()}`}
-                className={cn("text-lg font-medium", textColor)}
-              >
-                {item}
-              </a>
-            </li>
-          ))}
+          
+          <li>
+            <a
+              href="#gallery"
+              className={cn("text-lg font-medium", getTextColor())}
+            >
+              Galería
+            </a>
+          </li>
+          <li>
+            <a href="#location" className={cn("text-lg font-medium", getTextColor())}>
+              Ubicación
+            </a>
+          </li>
+          <li>
+            <a href="#contact" className={cn("text-lg font-medium", getTextColor())}>
+              Contacto
+            </a>
+          </li>
         </ul>
       </div>
 
       {/* Menú desplegable en móviles */}
-      <div
-        className={cn(
-          "fixed top-0 left-0 w-full h-screen bg-black/80 backdrop-blur-lg flex flex-col items-center justify-center space-y-6 text-white text-xl transition-all duration-300",
-          menuOpen ? "translate-x-0" : "-translate-x-full"
-        )}
-      >
-        {["Inicio", "Galería", "Ubicación", "Contacto"].map((item, index) => (
-          <a
-            key={index}
-            href={`#${item.toLowerCase()}`}
-            className="hover:text-gray-300"
-            onClick={() => setMenuOpen(false)} // Cierra el menú al hacer clic
-          >
-            {item}
+      {menuOpen && (
+        <div className="fixed top-0 left-0 w-full h-screen bg-black/80 flex flex-col items-center justify-center text-white text-xl space-y-6">
+          <a href="#inicio" className="hover:text-gray-300" onClick={() => setMenuOpen(false)}>
+            Inicio
           </a>
-        ))}
-      </div>
+          <a href="#gallery" className="hover:text-gray-300" onClick={() => setMenuOpen(false)}>
+            Galería
+          </a>
+          <a href="#location" className="hover:text-gray-300" onClick={() => setMenuOpen(false)}>
+            Ubicación
+          </a>
+          <a href="#contact" className="hover:text-gray-300" onClick={() => setMenuOpen(false)}>
+            Contacto
+          </a>
+        </div>
+      )}
     </nav>
   );
 };

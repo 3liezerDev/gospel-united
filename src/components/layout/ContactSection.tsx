@@ -4,10 +4,10 @@ import { Button } from "@/components/ui/button";
 
 const ContactSection = () => {
   return (
-    <section className="py-12 max-w-5xl  mx-auto ">
+    <section id="contact" className="py-20 max-w-5xl  mx-auto ">
       <div className="containerpx-4">
         {/* Título de la sección */}
-        <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-center mb-8">
+        <h2 className="text-3xl sm:text-4xl text-teal-900 md:text-4xl font-medium text-center mb-12">
           Contacto y Donaciones
         </h2>
 

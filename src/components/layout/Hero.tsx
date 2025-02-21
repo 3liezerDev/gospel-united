@@ -1,6 +1,7 @@
 
 import { buttonVariants } from "@/components/ui/button"
 import { Typewriter } from 'react-simple-typewriter';
+import { cn } from "@/lib/utils"
 
 
 const Hero = () => {
@@ -12,7 +13,7 @@ const Hero = () => {
   ];
 
   return (
-    <section className="relative min-h-screen flex items-center justify-center bg-cover bg-center">
+    <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-cover bg-center">
       {/* Fondo con imagen */}
       <div
         className="absolute inset-0 bg-[url('C:/Users/Zeze/Desktop/GOSPEL-UNITED/gospel-united/src/assets/images/dark.webp')] bg-cover bg-center saturate-150"
@@ -38,8 +39,13 @@ const Hero = () => {
             delaySpeed={1500}
           />
         </p>
-        <a className={buttonVariants({ variant: "default" })} href="">
-            + Más información
+        <a 
+          href="#purpose"
+          className={cn(
+            buttonVariants({ variant: "default" }),
+          )}
+        >
+          + Más información
         </a>
       </div>
     </section>

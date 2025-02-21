@@ -3,13 +3,51 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 const LocationSection = () => {
+
+  const placeDetail = [
+    {
+      index: 1,
+      title: "Fecha:",
+      subtitle:"Sábado 3 de Mayo de 2025"
+    },
+    {
+      index: 2,
+      title: "Hora:",
+      subtitle:"16:00 PM - 20:00 PM"
+    },
+    {
+      index: 3,
+      title: "Lugar:",
+      subtitle:"Carrer de València, 655, 08026 Barcelona, España"
+    },
+  ]
+
+
   return (
-    <section className="py-12">
-      <div className=" max-w-5xl mx-auto px-4 h-full ">
-        {/* Título de la sección */}
-        <h2 className="text-3xl sm:text-4xl md:text-4xl font-bold text-center mb-8">
+    <section id="location" className="py-12">
+        <h2 className="text-3xl sm:text-4xl text-teal-900 md:text-4xl font-medium text-center ">
           Ubicación y Medios de Transporte
         </h2>
+      <div className=" max-w-5xl mx-auto py-4 px-4 h-full "
+      >
+        
+        <Card className=" flex flex-col md:justify-around md:items-center md:flex-row shadow-md h-full px-6 py-2 my-10">
+      {placeDetail.map((data) => (
+        
+            <div
+              key={data.index}
+              className="grid grid-cols-[25px_1fr] items-start py-2 last:mb-0 last:pb-0"
+            >
+              <span className="flex h-2 w-2 translate-y-1 rounded-full bg-teal-700" />
+              <div className="space-y-1">
+                <p className="text-sm font-medium leading-none">
+                  {data.title}
+                </p>
+                <p className="text-sm text-muted-foreground">{data.subtitle}</p>
+              </div>
+            </div>
+          ))}
+          </Card>
 
         {/* Contenedor de la información */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 h-full">
@@ -17,7 +55,7 @@ const LocationSection = () => {
           <Card className="shadow-lg h-full">
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
-                <FaMapMarkerAlt className="text-xl" />
+                <FaMapMarkerAlt className="text-xl " />
                 <span>Ubicación</span>
               </CardTitle>
             </CardHeader>
@@ -48,35 +86,29 @@ const LocationSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <ul className="space-y-4">
+              <ul className="space-y-8">
                 {/* Autobús */}
                 <li className="flex items-center gap-2">
-                  <FaBus className="text-xl text-gray-700 dark:text-gray-300" />
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <FaBus className="text-xl text-gray-500" />
+                  <p className="text-gray-700">
                     <strong>Autobús:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                   </p>
                 </li>
                 {/* Tren */}
                 <li className="flex items-center gap-2">
-                  <FaTrain className="text-xl text-gray-700 dark:text-gray-300" />
+                  <FaTrain className="text-xl text-gray-500" />
                   <p className="text-gray-700 dark:text-gray-300">
                     <strong>Tren:</strong> Cras finibus ut augue a faucibus.
                   </p>
                 </li>
                 {/* Auto */}
                 <li className="flex items-center gap-2">
-                  <FaCar className="text-xl text-gray-700 dark:text-gray-300" />
-                  <p className="text-gray-700 dark:text-gray-300">
+                  <FaCar className="text-xl text-gray-500" />
+                  <p className="text-gray-700 ">
                     <strong>Auto:</strong> In iaculis at diam suscipit sodales.
                   </p>
                 </li>
-                {/* Bicicleta */}
-                <li className="flex items-center gap-2">
-                  <FaBicycle className="text-xl text-gray-700 dark:text-gray-300" />
-                  <p className="text-gray-700 dark:text-gray-300">
-                    <strong>Bicicleta:</strong> Sed rutrum lobortis ultrices.
-                  </p>
-                </li>
+                
               </ul>
             </CardContent>
           </Card>
