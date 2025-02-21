@@ -28,7 +28,7 @@ export function CarouselDApiDemo() {
   // Datos para las tarjetas
   const cardData = [
     {
-      imageSrc: "src/assets/images/danza-03.jpg",
+      imageSrc: "/assets/images/danza-03.jpg",
       imageAlt: "Notification Image",
       title: "Danza",
       subtitle: "Participación especial de danza",
@@ -40,7 +40,7 @@ export function CarouselDApiDemo() {
       buttonText: "Mark as Read",
     },
     {
-      imageSrc: "src/assets/images/Alabanza-danza (8).jpg",
+      imageSrc: "/assets/images/Alabanza-danza (8).jpg",
       imageAlt: "Notification Image",
       title: "Alabanza y adoración",
       subtitle: "You have 2 new updates.",
@@ -52,7 +52,7 @@ export function CarouselDApiDemo() {
       buttonText: "Update Now",
     },
     {
-      imageSrc: "src/assets/images/jovenes.jpg",
+      imageSrc: "/assets/images/jovenes.jpg",
       imageAlt: "Notification Image",
       title: "Participaciones especiales",
       subtitle: "Check the latest alerts.",

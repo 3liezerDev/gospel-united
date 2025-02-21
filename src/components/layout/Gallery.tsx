@@ -3,11 +3,11 @@ import { Button } from "../../components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 
 const images = [
-  { src: "src/assets/images/min-alabanza.jpg", alt: "Imagen 1" },
-  { src: "src/assets/images/danza-01.jpg", alt: "Imagen 2" },
-  { src: "src/assets/images/Alabanza-danza (7).jpg", alt: "Imagen 3" },
-  { src: "src/assets/images/Alabanza-danza (9).jpg", alt: "Imagen 4" },
-];
+    { src: "/assets/images/min-alabanza.jpg", alt: "Imagen 1" },
+    { src: "/assets/images/danza-01.jpg", alt: "Imagen 2" },
+    { src: "/assets/images/Alabanza-danza (7).jpg", alt: "Imagen 3" },
+    { src: "/assets/images/Alabanza-danza (9).jpg", alt: "Imagen 4" },
+  ];
 
 export default function Gallery() { 
   const [currentIndex, setCurrentIndex] = useState(0);

@@ -17,7 +17,7 @@ const Hero = () => {
     <section id="inicio" className="relative min-h-screen flex items-center justify-center bg-cover bg-center">
       {/* Fondo con imagen */}
       <div
-        className="absolute inset-0 bg-[url('C:/Users/Zeze/Desktop/GOSPEL-UNITED/gospel-united/src/assets/images/dark.webp')] bg-cover bg-center saturate-150"
+        className="absolute inset-0 bg-[url('/assets/images/dark.webp')] bg-cover bg-center saturate-150"
         aria-hidden="true"
       ></div>
 
