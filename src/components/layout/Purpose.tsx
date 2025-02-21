@@ -55,7 +55,7 @@ const Purpose = () => {
           <Card className="flex flex-col justify-start items-center w-full md:w-1/2 h-96 rounded-3xl border-neutral-200">
             <img
             className="w-xs h-full md:w-xs lg:w-md object-cover rounded-md"
-            src="src/assets/images/min-alabanza.jpg"
+            src="/assets/images/min-alabanza.jpg"
             alt=""
             />
           </Card>
