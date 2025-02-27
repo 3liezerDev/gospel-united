@@ -15,9 +15,9 @@ function Home() {
     <>
       <Hero />
       <Purpose />
-      <Carousel />
-      <LocationSection />
       <Gallery />
+      <LocationSection />
+      <Carousel />
       <ContactSection />
     </>
   )

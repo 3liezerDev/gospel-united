@@ -1,12 +1,13 @@
 import { useState } from "react"; 
 import { Button } from "../../components/ui/button"; 
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Badge } from "../ui/badge";
 
 const images = [
-    { src: "/assets/images/min-alabanza.jpg", alt: "Imagen 1" },
-    { src: "/assets/images/danza-01.jpg", alt: "Imagen 2" },
-    { src: "/assets/images/Alabanza-danza (7).jpg", alt: "Imagen 3" },
-    { src: "/assets/images/Alabanza-danza (9).jpg", alt: "Imagen 4" },
+    { src: "/assets/images/danza-alabanza01.jpg", alt: "Imagen 1" },
+    { src: "/assets/images/pueblo-05.jpg", alt: "Imagen 2" },
+    { src: "/assets/images/pueblo-06.jpg", alt: "Imagen 3" },
+    { src: "/assets/images/pastores-01.jpg", alt: "Imagen 4" },
   ];
 
 export default function Gallery() { 
@@ -18,8 +19,19 @@ export default function Gallery() {
   return (
     <div id="gallery" className="flex flex-col items-center text-center py-10 px-4 md:px-10">
       {/* Texto Encima del Carrusel */}
-      <h2 className="text-3xl sm:text-4xl text-teal-900 md:text-4xl font-medium text-center mb-4">Galería de Imágenes</h2>
-      <p className="text-gray-600 text-lg mb-4">Disfruta de las imagenes recopiladas de eventos pasados</p>
+      <h2 className="text-3xl sm:text-4xl text-teal-900 md:text-4xl font-medium text-center mb-4">
+        Congresos Anteriores
+      </h2>
+      <p className="text-gray-600 max-w-xl text-lg text-center">
+        Disfruta de las imágenes de nuestros eventos anteriores. <br />
+        <strong>Ven y acompáñanos en la próxima edición 2025</strong>
+      </p>
+      <div className="text-center mt-4">
+        <Badge >
+          Entrada Gratis
+        </Badge>
+      </div>
+
 
       {/* Contenedor de la Galería */}
       <div className="relative flex items-center justify-center w-full max-w-5xl">

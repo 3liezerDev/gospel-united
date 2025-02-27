@@ -28,7 +28,7 @@ export function CarouselDApiDemo() {
   // Datos para las tarjetas
   const cardData = [
     {
-      imageSrc: "/assets/images/danza-03.jpg",
+      imageSrc: "/assets/images/danza-01.jpg",
       imageAlt: "Notification Image",
       title: "Danza",
       subtitle: "Participación especial de danza",
@@ -40,7 +40,7 @@ export function CarouselDApiDemo() {
       buttonText: "Mark as Read",
     },
     {
-      imageSrc: "/assets/images/Alabanza-danza (8).jpg",
+      imageSrc: "/assets/images/danza-alabanza01.jpg",
       imageAlt: "Notification Image",
       title: "Alabanza y adoración",
       subtitle: "You have 2 new updates.",
@@ -79,7 +79,7 @@ export function CarouselDApiDemo() {
         <CarouselNext />
       </Carousel>
       <div className="py-2 text-center text-sm text-muted-foreground">
-        Slide {current} of {count}
+        Deslizar {current} de {count}
       </div>
     </div>
   );
