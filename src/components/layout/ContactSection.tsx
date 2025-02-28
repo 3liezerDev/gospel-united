@@ -30,7 +30,7 @@ const ContactSection = () => {
                     href="https://wa.me/+34657263938" // Reemplaza con tu número de WhatsApp
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="flex gap-2 text-gray-700"
+                    className="flex md:gap-2 text-gray-700"
                   >
                     <FaWhatsapp className="text-2xl text-green-500 " />
                     contáctanos por WhatsApp:<strong>Ps. Luis Arriola</strong>
