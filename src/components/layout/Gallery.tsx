@@ -26,7 +26,7 @@ export default function Gallery() {
         Disfruta de las imágenes de nuestros eventos anteriores. <br />
         <strong>Ven y acompáñanos en la próxima edición 2025</strong>
       </p>
-      <div className="text-center mt-4">
+      <div className="text-center mt-4 mb-6">
         <Badge >
           Entrada Gratis
         </Badge>

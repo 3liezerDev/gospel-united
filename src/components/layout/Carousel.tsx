@@ -28,45 +28,48 @@ export function CarouselDApiDemo() {
   // Datos para las tarjetas
   const cardData = [
     {
-      imageSrc: "/assets/images/danza-01.jpg",
-      imageAlt: "Notification Image",
+      imageSrc: "/assets/images/grupo-danza.jpg",
+      imageAlt: "Imagen de Danza",
       title: "Danza",
-      subtitle: "Participación especial de danza",
+      subtitle: "Expresando la adoración con danza ",
       notifications: [
-        { title: "Your call has been confirmed.", description: "1 hour ago" },
-        { title: "You have a new message!", description: "1 hour ago" },
-        { title: "Your subscription is expiring soon!", description: "2 hours ago" },
+        { title: "Coreografía especial de grupo de danza", description: "Grupo oficial del evento" },
+        { title: "Participaciones especiales", description: "Grupos invitados" },
+        { title: "Presentación oficial en evento gospel united", description: "Sábado 03 de Mayo 2025" },
       ],
-      buttonText: "Mark as Read",
+      buttonText: "Ver Galería",
     },
     {
       imageSrc: "/assets/images/danza-alabanza01.jpg",
-      imageAlt: "Notification Image",
-      title: "Alabanza y adoración",
-      subtitle: "You have 2 new updates.",
+      imageAlt: "Imagen de Alabanza",
+      title: "Alabanza y Adoración",
+      subtitle: "Elevando nuestras voces en gratitud",
       notifications: [
-        { title: "New version available.", description: "30 mins ago" },
-        { title: "Security patch applied.", description: "2 hours ago" },
-        { title: "Server maintenance at midnight.", description: "4 hours ago" },
+        { title: "Servicio de adoración en vivo", description: "Salmo 100:2 Adoren al Señor con alegría; vengan ante él con cánticos de júbilo." },
+        { title: "Interpretación de alabanza y adoración", description: "Interpretación musical en vivo" },
+        { title: "Participaciones especiales", description: "Cantantes invitados" },
       ],
-      buttonText: "Update Now",
+      buttonText: "Ver Galería",
     },
     {
-      imageSrc: "/assets/images/jovenes.jpg",
-      imageAlt: "Notification Image",
-      title: "Participaciones especiales",
-      subtitle: "Check the latest alerts.",
+      imageSrc: "/assets/images/pastores-01.jpg",
+      imageAlt: "Imagen de Participaciones Especiales",
+      title: "Participaciones Especiales",
+      subtitle: "Momentos únicos de inspiración y fortalecimiento",
       notifications: [
-        { title: "Suspicious login detected.", description: "10 mins ago" },
-        { title: "Server maintenance at midnight.", description: "4 hours ago" },
-        { title: "Server maintenance at midnight.", description: "4 hours ago" },
+        { title: "Testimonios impactantes", description: "obras maravillosas de Dios" },
+        { title: "Invitados especiales confirmados", description: "Pastores y predicadores" },
+        { title: "Presentaciones sorpresa", description: "Teatros, Cantos y más.." },
       ],
-      buttonText: "View Alerts",
+      buttonText: "Ver Galería",
     },
   ];
 
   return (
     <div className="mx-auto max-w-[70%] md:max-w-5xl py-6 my-6">
+      <h2 className="text-3xl font-bold text-center text-teal-900 mb-10">
+        Ven y disfruta con nosotros!
+      </h2>
       <Carousel setApi={setApi} className="w-full max-w-full">
         <CarouselContent>
           {cardData.map((data, index) => (

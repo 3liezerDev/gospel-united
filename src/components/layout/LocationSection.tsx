@@ -1,6 +1,6 @@
 import { FaMapMarkerAlt, FaBus, FaTrain, FaCar } from "react-icons/fa";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
-import { Button } from "../../components/ui/button";
+import { buttonVariants } from "../../components/ui/button";
 
 const LocationSection = () => {
 
@@ -60,9 +60,9 @@ const LocationSection = () => {
               </CardTitle>
             </CardHeader>
             <CardContent>
-              <p className="text-gray-700 dark:text-gray-300 mb-4">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras finibus ut augue a faucibus.
-              </p>
+            <p className="text-gray-700 dark:text-gray-300 mb-4">
+              Nos encontramos en <strong>Carrer de València, 655, 08026 Barcelona, España</strong>, una zona céntrica y de fácil acceso en la ciudad.
+            </p>
               {/* Mapa embebido (puedes usar Google Maps o cualquier otro servicio) */}
               <div className="w-full h-full">
                 <iframe
@@ -88,24 +88,24 @@ const LocationSection = () => {
             <CardContent>
               <ul className="space-y-8">
                 {/* Autobús */}
-                <li className="flex items-center gap-2">
-                  <FaBus className="text-xl text-gray-500" />
+                <li className="flex items-center gap-6">
+                  <FaBus className="text-4xl text-gray-500" />
                   <p className="text-gray-700">
-                    <strong>Autobús:</strong> Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    <strong>Autobús: H10, 33, 34, 62, V25. </strong>Estas rutas tienen paradas en las proximidades de Carrer de València, 655.
                   </p>
                 </li>
                 {/* Tren */}
-                <li className="flex items-center gap-2">
-                  <FaTrain className="text-xl text-gray-500" />
+                <li className="flex items-center gap-6">
+                  <FaTrain className="text-2xl text-gray-500" />
                   <p className="text-gray-700 dark:text-gray-300">
-                    <strong>Tren:</strong> Cras finibus ut augue a faucibus.
+                    <strong>Metro: L1 (Roja) </strong> La estación Clot es la más cercana a la dirección mencionada.
                   </p>
                 </li>
                 {/* Auto */}
-                <li className="flex items-center gap-2">
-                  <FaCar className="text-xl text-gray-500" />
-                  <p className="text-gray-700 ">
-                    <strong>Auto:</strong> In iaculis at diam suscipit sodales.
+                <li className="flex items-center gap-6">
+                  <FaCar className="text-4xl text-gray-500" />
+                  <p className="text-gray-700">
+                    <strong>Auto:</strong> La ubicación es accesible en coche, con opciones de estacionamiento en las inmediaciones.
                   </p>
                 </li>
                 
@@ -116,10 +116,14 @@ const LocationSection = () => {
 
         {/* Botón de acción */}
         <div className="text-center mt-8">
-          <Button>
+          <a
+          href="https://www.google.com/maps/place/Carrer+de+Val%C3%A8ncia,+655,+08026+Barcelona,+Espa%C3%B1a" 
+          target="_blank" 
+          rel="noopener noreferrer" 
+          className={buttonVariants({ variant: "default" })}> 
           <FaMapMarkerAlt className="text-md" />
             Obtener Dirección
-          </Button>
+          </a>
         </div>
       </div>
     </section>

@@ -8,6 +8,8 @@ html {
   scroll-behavior: smooth;
 }
 
+
+
 @theme {
   --font-display: "Satoshi";
   --breakpoint-3xl: 1920px;

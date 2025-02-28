@@ -1,5 +1,5 @@
 import { cn } from "../../lib/utils";
-import { Button } from "../../components/ui/button";
+import { buttonVariants } from "../../components/ui/button";
 import {
   Card,
   CardContent,
@@ -66,8 +66,7 @@ export function CardMod({
           </div>
         </CardContent>
         <CardFooter>
-          <Button className="w-full">{buttonText}</Button>
-        </CardFooter>
+        <a href="#gallery" className={buttonVariants({ variant: "default" }) + ' w-full'}>{buttonText}</a>        </CardFooter>
       </Card>
     </article>
   );
