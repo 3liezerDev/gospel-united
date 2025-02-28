@@ -2,7 +2,7 @@ import { Card } from "../../components/ui/card";
 
 const Purpose = () => {
   return (
-    <div id="purpose" className="w-full max-w-5xl mx-auto px-4 py-16">
+    <div id="purpose" className="w-full max-w-5xl mx-auto px-4 my-8 md:my-16">
       <div className="text-center space-y-4 ">
         {/* Título principal - más grueso y oscuro */}
         <h1 className="text-3xl sm:text-4xl md:text-4xl font-semibold text-teal-900 text-center mb-2">
@@ -24,7 +24,7 @@ const Purpose = () => {
         </div>
 
         <div className="flex flex-col-reverse justify-start items-start md:flex-row gap-2">
-          <div className="w-full md:w-1/2 space-y-4 text-left">
+          <div className="w-[80%] mx-auto  md:w-1/2 space-y-4 text-left">
             {/* Subtítulo - peso medio */}
             <h2 className="text-2xl font-medium text-teal-900 my-6">
             Afectaciones Causadas por la DANA
@@ -63,7 +63,7 @@ const Purpose = () => {
 
           <Card className="flex flex-col justify-start items-center w-full md:w-1/2 h-96 rounded-3xl border-neutral-200">
             <iframe
-              className="w-full h-full md:w-xs lg:w-md object-cover rounded-md"
+              className="w-[90%]  h-full md:w-xs lg:w-md object-cover rounded-md"
               src="https://www.youtube.com/embed/M03mDft2FD0?si=IEIDp6LocjRzgvHS"
               title="YouTube video player"
               frameBorder="0"

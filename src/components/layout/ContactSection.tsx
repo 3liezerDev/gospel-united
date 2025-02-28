@@ -4,7 +4,7 @@ import { buttonVariants } from "../../components/ui/button";
 
 const ContactSection = () => {
   return (
-    <section id="contact" className="py-20 max-w-5xl  mx-auto ">
+    <section id="contact" className="my-10 max-w-5xl  mx-auto ">
       <div className="containerpx-4">
         {/* Título de la sección */}
         <h2 className="text-3xl sm:text-4xl text-teal-900 md:text-4xl font-medium text-center mb-12">

@@ -17,7 +17,7 @@ export default function Gallery() {
   const nextImage = () => setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
 
   return (
-    <div id="gallery" className="flex flex-col items-center text-center py-10 px-4 md:px-10">
+    <div id="gallery" className="flex flex-col items-center text-center  py-8 px-4 md:px-10">
       {/* Texto Encima del Carrusel */}
       <h2 className="text-3xl sm:text-4xl text-teal-900 md:text-4xl font-medium text-center mb-4">
         Congresos Anteriores
