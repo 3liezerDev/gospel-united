@@ -10,7 +10,7 @@ const Hero = () => {
     {  text: 'Concierto solidario'  },
     {  text: 'Fecha: Sábado 3 de Mayo de 2025' },
     {  text: 'Lugar: Calle Valencia #655 BCN' },
-    {  text: 'Hora: 16:00 PM - 20:00 PM' },
+    {  text: 'Hora: 16:00 PM - 19:00 PM' },
   ];
 
   return (

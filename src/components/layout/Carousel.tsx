@@ -31,7 +31,7 @@ export function CarouselDApiDemo() {
       imageSrc: "/assets/images/grupo-danza.jpg",
       imageAlt: "Imagen de Danza",
       title: "Danza",
-      subtitle: "Expresando la adoración con danza ",
+      subtitle: "Expresando la adoración por medio de la danza ",
       notifications: [
         { title: "Coreografía especial de grupo de danza", description: "Grupo oficial del evento" },
         { title: "Participaciones especiales", description: "Grupos invitados" },

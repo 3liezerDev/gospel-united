@@ -23,6 +23,11 @@ const ContactSection = () => {
             </CardHeader>
             <CardContent>
               <ul className="space-y-4">
+                <li className="flex items-center gap-2"> 
+                  <p className="text-gray-700">
+                  Encargado:<strong> Luis Arriola</strong>
+                  </p>
+                </li>
                 {/* WhatsApp */}
                 <li className="flex items-center gap-2">
                   
@@ -33,26 +38,17 @@ const ContactSection = () => {
                     className="flex md:gap-2 text-gray-700"
                   >
                     <FaWhatsapp className="text-2xl text-green-500 " />
-                    contáctanos por WhatsApp:<strong>Ps. Luis Arriola</strong>
+                    contáctanos por WhatsApp:<strong> Luis Arriola</strong>
                   </a>
                 </li>
-                {/* Correo electrónico */}
-                <li className="flex items-center gap-2">
-                  <FaEnvelope className="text-xl text-gray-700 hover:text-gray-900" />
-                  <a
-                    href="mailto:sendasdegracia@gmail.com" // Reemplaza con tu correo
-                    className="text-gray-700 dark:text-gray-300 hover:text-blue-500"
-                  >
-                    Escríbenos a sendasdegracia@gmail.com
-                  </a>
-                </li>
+               
                 <li className="flex items-center gap-2">
                   <a
                     href="tel:+34657263938" // Reemplaza con tu número
                     className="flex gap-2 text-gray-700 dark:text-gray-300 hover:text-blue-500"
                   >
                   <FaPhone className="text-xl text-gray-700 hover:text-gray-900" />
-                    Llamar a <strong>Ps. Luis Arriola</strong>
+                    Llamar a: <strong> Luis Arriola</strong>
                   </a>
                 </li>
               </ul>
@@ -69,22 +65,36 @@ const ContactSection = () => {
             </CardHeader>
             <CardContent>
               <ul className="space-y-4">
-                {/* Bizum */}
+                {/* Bizum 
                 <li className="flex items-center gap-2">
                   <span className="text-xl">💳</span>
                   <p className="text-gray-700 dark:text-gray-300">
                     <strong>Bizum:</strong> al teléfono  <strong>#123456789</strong> para donar.
                   </p>
                 </li>
+                */}
+
+                 {/* Correo electrónico */}
+                 <li className="flex items-center gap-2">
+                  <FaEnvelope className="text-xl text-gray-700 hover:text-gray-900" />
+                  <a
+                    href="mailto:sendasdegraciabcn@gmail.com" // Reemplaza con tu correo
+                    className="text-gray-700 dark:text-gray-300 hover:text-blue-500"
+                  >
+                    Escríbenos a: <strong> sendasdegraciabcn@gmail.com </strong>
+                  </a>
+                </li>
+                
+                
                 {/* Transferencia bancaria */}
-                <li className="flex items-center gap-2">
+                <li className="flex items-start gap-2">
                   <span className="text-xl">🏦</span>
                   <p className="text-gray-700 dark:text-gray-300">
                     <strong>Transferencia bancaria:</strong>
                     <br />
                     Banco: CaixaBank
                     <br />
-                    IBAN: ES12 3456 7890 1234 5678 9012
+                    IBAN: ES14 2100 3052 7122 0071 0808
                   </p>
                 </li>
               </ul>

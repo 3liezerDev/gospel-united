@@ -13,7 +13,7 @@ const LocationSection = () => {
     {
       index: 2,
       title: "Hora:",
-      subtitle:"16:00 PM - 20:00 PM"
+      subtitle:"16:00 PM - 19:00 PM"
     },
     {
       index: 3,
@@ -61,7 +61,7 @@ const LocationSection = () => {
             </CardHeader>
             <CardContent>
             <p className="text-gray-700 dark:text-gray-300 mb-4">
-              Nos encontramos en <strong>Carrer de València, 655, 08026 Barcelona, España</strong>, una zona céntrica y de fácil acceso en la ciudad.
+              El evento será en el auditorio de <strong>Carrer de València, 655, 08026 Barcelona, España</strong>, una zona céntrica y de fácil acceso en la ciudad.
             </p>
               {/* Mapa embebido (puedes usar Google Maps o cualquier otro servicio) */}
               <div className="w-full h-full">
@@ -82,7 +82,7 @@ const LocationSection = () => {
             <CardHeader>
               <CardTitle className="flex items-center gap-2">
                 <FaBus className="text-xl" />
-                <span>Medios de Transporte</span>
+                <span>Medios de Transporte del Evento</span>
               </CardTitle>
             </CardHeader>
             <CardContent>

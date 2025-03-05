@@ -13,7 +13,7 @@ const Purpose = () => {
         {/* Texto descriptivo - más ligero y gris */}
         <div className=" mx-auto  my-4 mb-8">
           <h3 className="text-xl text-justify text-balance md:text-balance  max-w-[80%] mx-auto font-sm text-neutral-500 mb-4">
-            Congreso Cristiano de alabanza, teatro, danza y participaciones
+            Concierto Solidario de alabanza, teatro, danza y participaciones
             especiales <strong>a favor de los damnificados por la DANA 2024</strong>, unidos en
             fe y solidaridad.
           </h3>
@@ -43,7 +43,7 @@ const Purpose = () => {
                   rel="noopener noreferrer"
                   className="text-blue-500"
                 >
-                  La Vanguardia
+                 (Más información - La Vanguardia)
                 </a>
               </p>
               <p className="font-sm text-neutral-500 text-justify">
@@ -55,7 +55,7 @@ const Purpose = () => {
                   rel="noopener noreferrer"
                   className="text-blue-500"
                 >
-                  CNN en Español
+                  (Más información - CNN en español)
                 </a>
               </p>
             </div>
