@@ -157,23 +157,15 @@ const ContactModal: React.FC<ContactModalProps> = ({ trigger }) => {
         </DialogHeader>
         
         <div className="flex flex-col gap-4 mt-4">
-          <ContactItem
-            icon={FaHandHoldingHeart}
-            label="Encargado"
-            value={name}
-            action="Copiar Nombre"
-            copiedState={copiedName}
-            setCopiedState={setCopiedName}
-          />
 
-          <ContactItem
+          {/* <ContactItem
             icon={() => <span className="text-xl">🏦</span>}
             label="IBAN"
             value={iban}
             action="Copiar IBAN"
             copiedState={copiedIban}
             setCopiedState={setCopiedIban}
-          />
+          /> */}
           
           <ContactItem
             icon={FaWhatsapp}

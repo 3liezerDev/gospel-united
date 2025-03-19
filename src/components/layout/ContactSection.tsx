@@ -128,7 +128,7 @@ const ContactSection = () => {
                     Escríbenos a: <strong>sendasdegraciabcn@gmail.com</strong>
                   </a>
                 </li>
-                <li className="flex flex-col gap-2">
+                {/* <li className="flex flex-col gap-2">
                   <div className="flex items-center gap-2">
                     <span className="text-xl">🏦</span>
                     <p className="text-gray-700">
@@ -165,7 +165,7 @@ const ContactSection = () => {
                       </button>
                     </div>
                   </div>
-                </li>
+                </li> */}
               </ul>
             </CardContent>
           </Card>
