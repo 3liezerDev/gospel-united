@@ -21,7 +21,7 @@ interface ContactModalProps {
 }
 
 const ContactModal: React.FC<ContactModalProps> = ({ trigger }) => {
-  // const iban = "ES14 2100 3052 7122 0071 0808";
+  const iban = "ES69 2100 3052 7022 0071 1128";
   const email = "sendasdegraciabcn@gmail.com";
   const phone = "+34657263938";
 
@@ -158,14 +158,14 @@ const ContactModal: React.FC<ContactModalProps> = ({ trigger }) => {
         
         <div className="flex flex-col gap-4 mt-4">
 
-          {/* <ContactItem
+          <ContactItem
             icon={() => <span className="text-xl">🏦</span>}
             label="IBAN"
             value={iban}
             action="Copiar IBAN"
             copiedState={copiedIban}
             setCopiedState={setCopiedIban}
-          /> */}
+          /> 
           
           <ContactItem
             icon={FaWhatsapp}
