@@ -21,10 +21,10 @@ interface ContactModalProps {
 }
 
 const ContactModal: React.FC<ContactModalProps> = ({ trigger }) => {
-  const iban = "ES14 2100 3052 7122 0071 0808";
+  // const iban = "ES14 2100 3052 7122 0071 0808";
   const email = "sendasdegraciabcn@gmail.com";
   const phone = "+34657263938";
-  const name = "Luis Arriola";
+
 
   const [copiedIban, setCopiedIban] = useState(false);
   const [copiedName, setCopiedName] = useState(false);

@@ -1,64 +1,65 @@
-import { useState, useEffect } from "react";
-import { FaWhatsapp, FaEnvelope, FaHandHoldingHeart, FaPhone, FaCopy, FaCheck } from "react-icons/fa";
+// import { useState, useEffect } from "react";
+import { FaWhatsapp, FaEnvelope, FaHandHoldingHeart, FaPhone } from "react-icons/fa";
+// import { FaWhatsapp, FaEnvelope, FaHandHoldingHeart, FaPhone, FaCopy, FaCheck } from "react-icons/fa";
 import { Card, CardContent, CardHeader, CardTitle } from "../../components/ui/card";
 import { Button } from "../../components/ui/button";
-import { toast } from "sonner";
+// import { toast } from "sonner";
 import ContactModal from "../layout/Modal";
 
 const ContactSection = () => {
-  const [copied, setCopied] = useState(false);
-  const iban = "ES14 2100 3052 7122 0071 0808";
+  // const [copied, setCopied] = useState(false);
+  // const iban = "ES14 2100 3052 7122 0071 0808";
 
-  // Reset copied state when component unmounts or after timeout
-  useEffect(() => {
-    let timer: ReturnType<typeof setTimeout>;
-    if (copied) {
-      timer = setTimeout(() => setCopied(false), 2000);
-    }
-    return () => clearTimeout(timer);
-  }, [copied]);
+  // // Reset copied state when component unmounts or after timeout
+  // useEffect(() => {
+  //   let timer: ReturnType<typeof setTimeout>;
+  //   if (copied) {
+  //     timer = setTimeout(() => setCopied(false), 2000);
+  //   }
+  //   return () => clearTimeout(timer);
+  // }, [copied]);
 
-  const handleCopy = async () => {
-    try {
-      // Para dispositivos móviles, usamos un enfoque más robusto
-      if (navigator.clipboard && navigator.clipboard.writeText) {
-        await navigator.clipboard.writeText(iban);
-        setCopied(true);
-        toast.success("IBAN copiado al portapapeles", {
-          description: iban,
-          duration: 2000,
-        });
-      } else {
-        // Fallback para navegadores que no soporten clipboard API
-        const textArea = document.createElement("textarea");
-        textArea.value = iban;
-        textArea.style.position = "fixed";  // Evita scroll
-        textArea.style.opacity = "0";
-        document.body.appendChild(textArea);
-        textArea.focus();
-        textArea.select();
+  // const handleCopy = async () => {
+  //   try {
+  //     // Para dispositivos móviles, usamos un enfoque más robusto
+  //     if (navigator.clipboard && navigator.clipboard.writeText) {
+  //       await navigator.clipboard.writeText(iban);
+  //       setCopied(true);
+  //       toast.success("IBAN copiado al portapapeles", {
+  //         description: iban,
+  //         duration: 2000,
+  //       });
+  //     } else {
+  //       // Fallback para navegadores que no soporten clipboard API
+  //       const textArea = document.createElement("textarea");
+  //       textArea.value = iban;
+  //       textArea.style.position = "fixed";  // Evita scroll
+  //       textArea.style.opacity = "0";
+  //       document.body.appendChild(textArea);
+  //       textArea.focus();
+  //       textArea.select();
         
-        const successful = document.execCommand("copy");
-        document.body.removeChild(textArea);
+  //       const successful = document.execCommand("copy");
+  //       document.body.removeChild(textArea);
         
-        if (successful) {
-          setCopied(true);
-          toast.success("IBAN copiado al portapapeles", {
-            description: iban,
-            duration: 2000,
-          });
-        } else {
-          throw new Error("Fallback copy failed");
-        }
-      }
-    } catch (err) {
-      console.error("Error al copiar:", err);
-      toast.error("Error al copiar", {
-        description: "Intenta seleccionar y copiar manualmente",
-        duration: 3000,
-      });
-    }
-  };
+  //       if (successful) {
+  //         setCopied(true);
+  //         toast.success("IBAN copiado al portapapeles", {
+  //           description: iban,
+  //           duration: 2000,
+  //         });
+  //       } else {
+  //         throw new Error("Fallback copy failed");
+  //       }
+  //     }
+  //   } catch (err) {
+  //     console.error("Error al copiar:", err);
+  //     toast.error("Error al copiar", {
+  //       description: "Intenta seleccionar y copiar manualmente",
+  //       duration: 3000,
+  //     });
+  //   }
+  // };
 
   return (
     <section id="contact" className="my-10 max-w-5xl mx-auto">
