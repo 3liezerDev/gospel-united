@@ -139,7 +139,7 @@ const ContactSection = () => {
                   <div className="ml-3 ">
                     <p className="text-gray-700">Banco: CaixaBank</p>
                     
-                    <div className="flex flex-col sm:flex-row sm:gap-2 items-start sm:items-center mt-2">
+                    <div className="flex flex-col  sm:gap-2 items-start sm:items-start mt-2">
                       <div className="md:w-auto font-mono text-nowrap bg-gray-50 p-2 rounded border border-gray-200 mr-2 select-all">
                         {iban}
                       </div>

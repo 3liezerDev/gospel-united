@@ -4,6 +4,7 @@ import  Purpose from "../components/layout/Purpose"
 import LocationSection from "../components/layout/LocationSection"
 import ContactSection from "../components/layout/ContactSection"
 import Gallery from "../components/layout/Gallery"
+import BentoGrid from "../components/layout/BentoGrid"
 
 
 
@@ -17,6 +18,7 @@ function Home() {
       <Purpose />
       <Gallery />
       <LocationSection />
+      <BentoGrid />
       <Carousel />
       <ContactSection />
     </>

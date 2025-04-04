@@ -12,12 +12,12 @@ const Purpose = () => {
 
         {/* Texto descriptivo - más ligero y gris */}
         <div className=" mx-auto  my-4 mb-8">
-          <h3 className="text-xl text-justify text-balance md:text-balance  max-w-[80%] mx-auto font-sm text-neutral-500 mb-4">
+          <h3 className="text-xl text-justify text-balance md:text-balance  max-w-[80%] mx-auto font-sm text-gray-700 mb-4">
             Concierto Solidario de alabanza, teatro, danza y participaciones
             especiales <strong>a favor de los damnificados por la DANA 2024</strong>, unidos en
             fe y solidaridad.
           </h3>
-          <h5 className="text-[12px] md:text-sm max-w-[80%] mx-auto font-bold md:font-bold text-neutral-700 mb-4">
+          <h5 className="text-[12px] md:text-sm max-w-[80%] mx-auto font-bold md:font-bold text-gray-700 mb-4">
             * Lucas 10:33 (NVI) - "Pero un samaritano que iba de viaje, llegó a
             donde estaba el hombre y, viéndolo, se compadeció de él."
           </h5>
@@ -32,7 +32,7 @@ const Purpose = () => {
 
             {/* Texto descriptivo - más ligero y gris */}
             <div className="space-y-6">
-              <p className="font-sm text-neutral-500 text-justify">
+              <p className="font-sm text-gray-700 text-justify">
                 
                 Según los medios de comunicación la DANA en la Comunidad Valenciana dejó un total <strong>aproximado</strong> de <strong>224 muertos </strong>
                 y <strong>decenas de desaparecidos</strong> en la provincia de Valencia. La alerta se emitió cuando las
@@ -46,7 +46,7 @@ const Purpose = () => {
                  (Más información - La Vanguardia)
                 </a>
               </p>
-              <p className="font-sm text-neutral-500 text-justify">
+              <p className="font-sm text-gray-700 text-justify">
                 Se estima que unos <strong>134.418 inmuebles</strong>  resultaron afectados, con
                 un total de <strong>54.312 hectáreas dañadas</strong>, alrededor de <strong>115 colegios</strong> afectados, más de <strong>5,000 comercios</strong> afectados de los cuales <strong>3,000 siguen cerrados.</strong> el impacto económico total se estima en <strong>21.819 millones de euros</strong>, lo que representa aproximadamente el <strong>32% del Producto Interior Bruto (PIB) de la provincia.{" "}</strong>
                 <a
