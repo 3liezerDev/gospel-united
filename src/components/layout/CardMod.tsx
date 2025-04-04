@@ -54,7 +54,7 @@ export function CardMod({
               >
                 <span className="flex h-2 w-2 translate-y-1 rounded-full bg-teal-700" />
                 <div className="space-y-1">
-                  <p className="text-sm  font-medium leading-none">
+                  <p className="text-sm text-gray-700 font-medium leading-none">
                     {notification.title}
                   </p>
                   <p className="text-sm text-muted-foreground">

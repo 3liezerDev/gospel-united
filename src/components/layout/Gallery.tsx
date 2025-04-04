@@ -2,19 +2,13 @@ import { useState } from "react";
 import { Button } from "../../components/ui/button"; 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { Badge } from "../ui/badge";
-
-const images = [
-    { src: "/assets/images/danza-alabanza01.jpg", alt: "Imagen 1" },
-    { src: "/assets/images/pueblo-05.jpg", alt: "Imagen 2" },
-    { src: "/assets/images/pueblo-06.jpg", alt: "Imagen 3" },
-    { src: "/assets/images/pastores-01.jpg", alt: "Imagen 4" },
-  ];
+import { galleryImages } from "../../lib/galleryImages";
 
 export default function Gallery() { 
   const [currentIndex, setCurrentIndex] = useState(0);
 
-  const prevImage = () => setCurrentIndex((prev) => (prev === 0 ? images.length - 1 : prev - 1)); 
-  const nextImage = () => setCurrentIndex((prev) => (prev === images.length - 1 ? 0 : prev + 1));
+  const prevImage = () => setCurrentIndex((prev) => (prev === 0 ? galleryImages.length - 1 : prev - 1)); 
+  const nextImage = () => setCurrentIndex((prev) => (prev === galleryImages.length - 1 ? 0 : prev + 1));
 
   return (
     <div id="gallery" className="flex flex-col items-center text-center  py-8 px-4 md:px-10">
@@ -22,7 +16,7 @@ export default function Gallery() {
       <h2 className="text-3xl sm:text-4xl text-teal-900 md:text-4xl font-medium text-center mb-4">
         Congresos Anteriores
       </h2>
-      <p className="text-gray-600 max-w-xl text-lg text-center">
+      <p className="text-gray-700 max-w-xl text-lg text-center">
         Disfruta de las imágenes de nuestros eventos anteriores. <br />
         <strong>Ven y acompáñanos en la próxima edición 2025</strong>
       </p>
@@ -42,8 +36,8 @@ export default function Gallery() {
 
         {/* Imágenes en Capas */}
         <div className="relative w-full h-80 sm:h-96 flex items-center justify-center">
-          {images.map((image, index) => {
-            const position = (index - currentIndex + images.length) % images.length;
+          {galleryImages.map((image, index) => {
+            const position = (index - currentIndex + galleryImages.length) % galleryImages.length;
             const isMain = position === 0;
             const scale = isMain ? "scale-100" : "scale-90";
             const opacity = isMain ? "opacity-100" : "opacity-30";
