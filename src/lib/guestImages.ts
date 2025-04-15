@@ -7,12 +7,13 @@ export const images = [
       rowSpan: 1,
     },
     {
-        src: "/assets/images/guestBento/alicante.webp",
-        alt: "Alicante",
-        ministry: "Familia y amigos",
-        colSpan: 2,
-        rowSpan: 1,
+      src: "/assets/images/guestBento/eva-Hans.jpg",
+      alt: "Familia y amigos",
+      ministry: "Unidad ministerial",
+      colSpan: 1,
+      rowSpan: 1,
     },
+    
     {
         src: "/assets/images/guestBento/psLuis-ps.webp",
         alt: "Familia y amigos",
@@ -22,27 +23,43 @@ export const images = [
       },
       
     {
-      src: "/assets/images/guestBento/manresa.webp",
-      alt: "Manresa",
-      ministry: "Ministerio sendas de gracia",
-      colSpan: 1,
-      rowSpan: 2,
+      src: "/assets/images/guestBento/pastores-koinonia.jpg",
+      alt: "Familia y amigos",
+      ministry: "Unidad ministerial",
+      colSpan: 2,
+      rowSpan: 1,
     },
     {
         src: "/assets/images/guestBento/pastoresyhermanos.webp",
         alt: "Familia y amigos",
-        ministry: "Unidad ministerial",
+        ministry: "Ministerio sendas de gracia",
         colSpan: 1,
         rowSpan: 1,
       },
-    {
-        src: "/assets/images/guestBento/reunion-pablo.webp",
+    
+
+      {
+        src: "/assets/images/guestBento/eva-Han2.jpg",
         alt: "Familia y amigos",
-        ministry: "Ministerio sendas de gracia",
-        colSpan: 2,
+        ministry: "",
+        colSpan: 1,
         rowSpan: 1,
       },
-    
+      {
+        src: "/assets/images/guestBento/pas-agustin.webp",
+        alt: "Familia y amigos",
+        ministry: "Ministerio sendas de gracia",
+        colSpan: 1,
+        rowSpan: 1,
+      },
+      
+      {
+        src: "/assets/images/guestBento/pastor-wilson.jpg",
+        alt: "Alicante",
+        ministry: "Familia y amigos",
+        colSpan: 1,
+        rowSpan: 1,
+    },
     
     
   ];
