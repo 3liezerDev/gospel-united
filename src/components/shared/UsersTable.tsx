@@ -51,6 +51,22 @@ const UsersTable = () => {
     // No necesitas llamar fetchUsers() aquí, Realtime se encarga
   };
 
+  const deleteUser = async (id: number) => {
+    const confirmDelete = window.confirm('¿Estás seguro de que quieres eliminar este usuario? Esta acción no se puede deshacer.');
+
+    if (!confirmDelete) return;
+
+    const { error } = await supabase
+      .from('users')
+      .delete()
+      .eq('id', id);
+
+    if (error) {
+      console.error('❌ Error al eliminar usuario:', error);
+    }
+    // No llamamos fetchUsers aquí porque el canal Realtime se encarga
+  };
+
   useEffect(() => {
     fetchUsers();
 
@@ -75,7 +91,7 @@ const UsersTable = () => {
   }, []);
 
   return (
-    <div className="max-w-4xl mx-auto mt-10">
+    <div className="max-w-6xl mx-auto mt-10">
       <h2 className="text-2xl font-bold mb-4">Usuarios Registrados</h2>
       {loading ? (
         <p>Cargando usuarios...</p>
@@ -90,6 +106,7 @@ const UsersTable = () => {
               <th className="border px-4 py-2">Documento</th>
               <th className="border px-4 py-2">Dirección</th>
               <th className="border px-4 py-2">Completado</th>
+              <th className="border px-4 py-2">Acciones</th> {/* Nueva columna */}
             </tr>
           </thead>
           <tbody>
@@ -117,6 +134,14 @@ const UsersTable = () => {
                       <span className="text-gray-500">Pendiente</span>
                     )}
                   </label>
+                </td>
+                <td className="border px-4 py-2">
+                  <button
+                    onClick={() => deleteUser(user.id)}
+                    className="bg-red-500 hover:bg-red-600 text-white font-bold py-1 px-2 rounded"
+                  >
+                    X
+                  </button>
                 </td>
               </tr>
             ))}
