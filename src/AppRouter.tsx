@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Layout from "./components/layout/Layout";
 import Form from './pages/Form'; 
 import UserList from './pages/UserList'; 
+import Collaborators from "./pages/Collaborators";
 const AppRouter = () => {
   return (
     <Router>
@@ -12,6 +13,7 @@ const AppRouter = () => {
 
         <Route element={<Layout />}> 
           <Route index path="/" element={<Home />} />
+          <Route index path="colaboradores" element={<Collaborators />} />
           
         </Route>
 
