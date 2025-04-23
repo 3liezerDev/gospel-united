@@ -1,11 +1,12 @@
 import { useEffect } from "react";
 import { useLocation } from "react-router-dom";
 import Hero from "../components/layout/Hero"
-import  Carousel from "../components/layout/Carousel"
+// import  Carousel from "../components/layout/Carousel"
 import  Purpose from "../components/layout/Purpose"
 import LocationSection from "../components/layout/LocationSection"
 import ContactSection from "../components/layout/ContactSection"
-import Gallery from "../components/layout/Gallery"
+import GalleryValencia from "../components/layout/GalleryValencia"
+import SpecialInvitation from "../components/layout/SpecialInvitation"
 
 
 
@@ -29,9 +30,9 @@ function Home() {
     <>
       <Hero />
       <Purpose />
-      <Gallery />
+      <GalleryValencia />
       <LocationSection />
-      <Carousel />
+      <SpecialInvitation />
       <ContactSection />
     </>
   );
