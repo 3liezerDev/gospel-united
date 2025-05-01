@@ -2,6 +2,7 @@ import { Formik, Form, Field, ErrorMessage } from 'formik';
 import { Button } from "../ui/button";
 import * as Yup from 'yup';
 import { supabase } from '../../lib/supabaseClient';
+import { toast } from "sonner";  // 👈 Importa useToast
 
 const UserSchema = Yup.object().shape({
   name: Yup.string().required('El nombre es obligatorio'),
@@ -25,15 +26,15 @@ const UserForm = () => {
 
     if (error) {
       if (error.code === '23505') {
-        alert('❌ El documento o dirección ya está registrado');
+        toast.error('❌ El documento o dirección ya está registrado');
       } else {
-        alert('❌ Error al guardar en Supabase');
+        toast.error('❌ Error al guardar en Supabase');
         console.error(error);
       }
       return;
     }
 
-    alert('✅ ¡Datos guardados con éxito!');
+    toast.success('✅ ¡Datos guardados con éxito!');
     resetForm();
   };
 
@@ -77,9 +78,9 @@ const UserForm = () => {
               </div>
             ))}
 
-          <Button type="submit" className="w-full" variant="default">
-            Enviar
-          </Button>
+            <Button type="submit" className="w-full" variant="default">
+              Enviar
+            </Button>
           </Form>
         )}
       </Formik>
